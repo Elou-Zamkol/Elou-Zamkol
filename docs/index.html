@@ -7,7 +7,7 @@
 <style>
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'Inter',-apple-system,system-ui,sans-serif;background:#000!important;color:#e0e0e0}
+body{font-family:'Inter',-apple-system,system-ui,sans-serif;background:#000;color:#e0e0e0;overflow-x:hidden}
 
 .bw-grid-bg{position:fixed;top:0;left:0;width:100%;height:100%;background-image:linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);background-size:50px 50px;animation:gridMove 20s linear infinite;pointer-events:none;z-index:0}
 @keyframes gridMove{0%{background-position:0 0}100%{background-position:50px 50px}}
@@ -28,13 +28,26 @@ body{font-family:'Inter',-apple-system,system-ui,sans-serif;background:#000!impo
 
 .container{max-width:851px;margin:0 auto;padding:40px 20px;position:relative;z-index:1}
 
+/* ===== TOP SECTION ===== */
+.bw-top{position:relative;text-align:center;padding-top:10px}
+
+.bw-ascii{font-family:'JetBrains Mono',monospace;font-size:8px;color:#222;white-space:pre;line-height:1.15;margin:0 0 12px;text-align:center;overflow:hidden}
+
+.bw-avatar-wrap{position:relative;display:inline-block;margin:0 auto 18px}
+.bw-avatar{width:130px;height:130px;border-radius:50%;border:3px solid #333;filter:grayscale(100%);transition:all .4s ease;object-fit:cover;display:block;margin:0 auto}
+.bw-avatar:hover{filter:grayscale(0%);border-color:#fff;box-shadow:0 0 40px rgba(255,255,255,.2);transform:scale(1.08)}
+.bw-avatar-ring{position:absolute;top:-8px;left:-8px;right:-8px;bottom:-8px;border-radius:50%;border:2px solid transparent;border-top-color:#fff;border-right-color:#fff;animation:ringSpin 3s linear infinite}
+@keyframes ringSpin{to{transform:rotate(360deg)}}
+.bw-avatar-status{position:absolute;bottom:4px;right:4px;width:16px;height:16px;background:#fff;border-radius:50%;border:3px solid #000;animation:pulse 2s ease-in-out infinite}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(255,255,255,.4)}50%{box-shadow:0 0 0 6px rgba(255,255,255,0)}}
+
 .bw-name{font-size:64px;font-weight:900;letter-spacing:2px;background:linear-gradient(135deg,#fff 0%,#888 50%,#fff 100%);background-size:200% 200%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 4s ease-in-out infinite;margin:0 0 6px;text-align:center}
 @keyframes shine{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
 .bw-tagline{font-family:'JetBrains Mono',monospace;font-size:14px;color:#555;letter-spacing:3px;text-transform:uppercase;margin-bottom:8px;text-align:center}
 .bw-tagline .cursor{display:inline-block;width:8px;height:16px;background:#fff;margin-left:2px;vertical-align:middle;animation:blink 1s step-end infinite}
 @keyframes blink{50%{opacity:0}}
 
-.bw-views{display:flex;justify-content:center;align-items:center;margin-bottom:8px;z-index:5;overflow:hidden}
+.bw-views{position:absolute;top:0;right:0;display:flex;align-items:center;z-index:5;overflow:hidden}
 .bw-views-track{display:flex;align-items:center;gap:8px;padding:7px 12px 7px 10px;background:#0a0a0a;border:1px solid #1a1a1a;border-right:none;border-radius:6px 0 0 6px;position:relative}
 .bw-views-track::after{content:'';position:absolute;top:0;bottom:0;left:0;width:100%;background:linear-gradient(90deg,transparent 0%,rgba(255,255,255,.08) 50%,transparent 100%);animation:scanLine 3s ease-in-out infinite}
 @keyframes scanLine{0%{transform:translateX(-100%)}60%,100%{transform:translateX(100%)}}
@@ -51,18 +64,12 @@ body{font-family:'Inter',-apple-system,system-ui,sans-serif;background:#000!impo
 @keyframes uptimePulse{0%,100%{box-shadow:0 0 0 0 rgba(255,255,255,.5)}50%{box-shadow:0 0 0 4px rgba(255,255,255,0)}}
 .bw-uptime-time{color:#fff;font-weight:600}
 
-.bw-avatar-wrap{position:relative;display:inline-block;margin:0 auto 16px;text-align:center}
-.bw-avatar{width:130px;height:130px;border-radius:50%;border:3px solid #333;filter:grayscale(100%);transition:all .4s ease;object-fit:cover}
-.bw-avatar:hover{filter:grayscale(0%);border-color:#fff;box-shadow:0 0 40px rgba(255,255,255,.2);transform:scale(1.08)}
-.bw-avatar-ring{position:absolute;top:-8px;left:-8px;right:-8px;bottom:-8px;border-radius:50%;border:2px solid transparent;border-top-color:#fff;border-right-color:#fff;animation:ringSpin 3s linear infinite}
-@keyframes ringSpin{to{transform:rotate(360deg)}}
-.bw-avatar-status{position:absolute;bottom:4px;right:4px;width:16px;height:16px;background:#fff;border-radius:50%;border:3px solid #000;animation:pulse 2s ease-in-out infinite}
-@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(255,255,255,.4)}50%{box-shadow:0 0 0 6px rgba(255,255,255,0)}}
-
+/* ===== TABS ===== */
 .bw-tabs{margin:24px 0 30px;text-align:center}
 .bw-tab{display:inline-block;margin:0 5px;padding:8px 20px;border-radius:999px;text-decoration:none;font-weight:600;font-size:13px;color:#555;background:rgba(255,255,255,.05);border:1px solid #222;transition:all .3s ease;font-family:'Inter',sans-serif}
 .bw-tab:hover{border-color:#555;color:#aaa;transform:translateY(-2px)}
 
+/* ===== LANGUAGE PANELS ===== */
 .bw-panel{display:none;animation:fadeInUp .6s ease-out}
 @keyframes fadeInUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
 .bw-panel-ru{display:block}
@@ -76,6 +83,7 @@ body{font-family:'Inter',-apple-system,system-ui,sans-serif;background:#000!impo
 #az:target~.bw-tabs .bw-tab-az,#en:target~.bw-tabs .bw-tab-en,#zh:target~.bw-tabs .bw-tab-zh{background:#fff;color:#000;border-color:#fff}
 #az:target~.bw-tabs .bw-tab-ru,#az:target~.bw-tabs .bw-tab-en,#az:target~.bw-tabs .bw-tab-zh,#en:target~.bw-tabs .bw-tab-ru,#en:target~.bw-tabs .bw-tab-az,#en:target~.bw-tabs .bw-tab-zh,#zh:target~.bw-tabs .bw-tab-ru,#zh:target~.bw-tabs .bw-tab-az,#zh:target~.bw-tabs .bw-tab-en{background:rgba(255,255,255,.05);color:#555;border-color:#222}
 
+/* ===== HERO ===== */
 .bw-hero{position:relative;max-width:700px;margin:0 auto 28px;border-radius:16px;overflow:hidden;border:1px solid #1a1a1a;transition:all .4s ease}
 .bw-hero:hover{border-color:#fff;box-shadow:0 0 50px rgba(255,255,255,.08)}
 .bw-hero img{width:100%;display:block;filter:grayscale(100%) contrast(1.1);transition:filter .5s ease}
@@ -85,6 +93,7 @@ body{font-family:'Inter',-apple-system,system-ui,sans-serif;background:#000!impo
 .bw-hero-title{font-size:20px;font-weight:800;color:#fff;margin-bottom:4px}
 .bw-hero-sub{font-size:12px;color:#666;font-family:'JetBrains Mono',monospace}
 
+/* ===== ABOUT ===== */
 .bw-about-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:700px;margin:0 auto 28px}
 .bw-about-left{background:#0a0a0a;border:1px solid #1a1a1a;border-radius:16px;padding:24px;text-align:left;transition:all .3s ease}
 .bw-about-left:hover{border-color:#333;transform:translateY(-3px)}
@@ -99,6 +108,7 @@ body{font-family:'Inter',-apple-system,system-ui,sans-serif;background:#000!impo
 .bw-about-stat-num{font-size:24px;font-weight:900;color:#fff;font-family:'Inter',sans-serif}
 .bw-about-stat-label{font-size:9px;color:#555;font-family:'JetBrains Mono',monospace;letter-spacing:1px;text-transform:uppercase}
 
+/* ===== TERMINAL ===== */
 .bw-terminal{max-width:700px;margin:0 auto 28px;background:#0a0a0a;border:1px solid #1a1a1a;border-radius:14px;overflow:hidden;transition:all .3s ease}
 .bw-terminal:hover{border-color:#333;box-shadow:0 4px 30px rgba(255,255,255,.05);transform:translateY(-3px)}
 .bw-term-bar{display:flex;align-items:center;gap:6px;padding:10px 14px;background:#111;border-bottom:1px solid #1a1a1a}
@@ -106,7 +116,6 @@ body{font-family:'Inter',-apple-system,system-ui,sans-serif;background:#000!impo
 .bw-term-dot.on{background:#fff}
 .bw-term-title{flex:1;text-align:center;font-family:'JetBrains Mono',monospace;font-size:11px;color:#555;letter-spacing:1px}
 .bw-term-body{padding:16px 18px;font-family:'JetBrains Mono',monospace;font-size:12.5px;line-height:2;color:#888;min-height:220px}
-
 .bw-term-line{overflow:hidden;white-space:nowrap;animation:typeLine .8s steps(40) forwards;width:0}
 .bw-term-line:nth-child(1){animation-delay:0s}
 .bw-term-line:nth-child(2){animation-delay:.8s}
@@ -128,8 +137,10 @@ body{font-family:'Inter',-apple-system,system-ui,sans-serif;background:#000!impo
 .bw-term-line .glow{color:#fff;font-weight:700;text-shadow:0 0 8px rgba(255,255,255,.3)}
 .bw-term-cursor{display:inline-block;width:7px;height:14px;background:#fff;vertical-align:middle;animation:blink 1s step-end infinite}
 
+/* ===== SECTIONS ===== */
 .bw-section-title{font-family:'JetBrains Mono',monospace;font-size:12px;color:#555;letter-spacing:2px;text-transform:uppercase;margin-bottom:16px;max-width:700px;margin-left:auto;margin-right:auto;text-align:left}
 
+/* ===== LANG CARDS ===== */
 .bw-lang-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:700px;margin:0 auto 28px}
 .bw-lang-card{background:#0a0a0a;border:1px solid #1a1a1a;border-radius:14px;padding:20px;text-align:left;transition:all .4s ease;position:relative;overflow:hidden}
 .bw-lang-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,var(--accent),transparent);opacity:0;transition:opacity .3s ease}
@@ -145,6 +156,7 @@ body{font-family:'Inter',-apple-system,system-ui,sans-serif;background:#000!impo
 .bw-lang-tags{display:flex;flex-wrap:wrap;gap:3px}
 .bw-lang-tag{font-size:9px;padding:2px 6px;border-radius:3px;background:#111;color:#666;font-family:'JetBrains Mono',monospace;border:1px solid #1a1a1a}
 
+/* ===== SKILLS ===== */
 .bw-skills{max-width:600px;margin:0 auto 28px}
 .bw-skills-title{font-family:'JetBrains Mono',monospace;font-size:12px;color:#555;letter-spacing:2px;text-transform:uppercase;margin-bottom:14px}
 .bw-skill{display:flex;align-items:center;gap:12px;margin-bottom:10px}
@@ -154,6 +166,7 @@ body{font-family:'Inter',-apple-system,system-ui,sans-serif;background:#000!impo
 .bw-skill-fill::after{content:'';position:absolute;right:0;top:-2px;width:3px;height:12px;background:#fff;border-radius:2px;box-shadow:0 0 10px rgba(255,255,255,.5)}
 .bw-skill-pct{width:36px;font-size:11px;color:#444;font-family:'JetBrains Mono',monospace;font-weight:700}
 
+/* ===== DONUTS ===== */
 .bw-donuts{display:flex;flex-wrap:wrap;justify-content:center;gap:30px;max-width:700px;margin:0 auto 28px}
 .bw-donut-item{text-align:center;transition:all .4s cubic-bezier(.2,.8,.3,1);cursor:default}
 .bw-donut-item:hover{transform:scale(1.15)}
@@ -170,12 +183,14 @@ body{font-family:'Inter',-apple-system,system-ui,sans-serif;background:#000!impo
 .bw-donut-label{font-family:'JetBrains Mono',monospace;font-size:11px;color:#555;margin-top:6px;transition:color .3s ease}
 .bw-donut-pct{font-family:'Inter',sans-serif;font-size:18px;font-weight:800;color:#fff;transition:all .3s ease}
 
+/* ===== PILLS ===== */
 .bw-pills{max-width:700px;margin:0 auto 20px;text-align:left}
 .bw-pills-title{font-family:'JetBrains Mono',monospace;font-size:12px;color:#555;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px}
 .bw-pill-c{display:flex;flex-wrap:wrap;gap:6px}
 .bw-pill{display:inline-block;padding:5px 12px;border-radius:6px;font-size:12px;font-weight:600;color:#888;background:#111;border:1px solid #222;font-family:'JetBrains Mono',monospace;transition:all .2s ease;text-decoration:none}
 .bw-pill:hover{background:#fff;color:#000;border-color:#fff;transform:translateY(-2px) scale(1.05);box-shadow:0 4px 12px rgba(255,255,255,.1)}
 
+/* ===== STATS ===== */
 .bw-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;max-width:600px;margin:0 auto 28px}
 .bw-stat{background:#0a0a0a;border:1px solid #1a1a1a;border-radius:12px;padding:20px 14px;text-align:center;transition:all .3s ease;position:relative;overflow:hidden}
 .bw-stat::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.05),transparent);transition:left .5s ease}
@@ -184,6 +199,7 @@ body{font-family:'Inter',-apple-system,system-ui,sans-serif;background:#000!impo
 .bw-stat-num{font-size:32px;font-weight:900;color:#fff;font-family:'Inter',sans-serif}
 .bw-stat-label{font-size:10px;color:#444;text-transform:uppercase;letter-spacing:2px;margin-top:4px;font-family:'JetBrains Mono',monospace}
 
+/* ===== TIMELINE ===== */
 .bw-timeline{max-width:600px;margin:0 auto 28px;position:relative;padding-left:24px}
 .bw-timeline::before{content:'';position:absolute;left:8px;top:0;bottom:0;width:1px;background:#333}
 .bw-timeline-item{position:relative;margin-bottom:20px;padding-left:20px}
@@ -192,16 +208,26 @@ body{font-family:'Inter',-apple-system,system-ui,sans-serif;background:#000!impo
 .bw-timeline-text{font-size:13px;color:#999;line-height:1.5}
 .bw-timeline-text b{color:#fff}
 
+/* ===== MISC ===== */
 .bw-divider{width:60px;height:1px;background:linear-gradient(90deg,transparent,#555,transparent);margin:28px auto}
 .bw-graph{max-width:700px;margin:0 auto 20px;text-align:center}
 .bw-graph img{width:100%;border-radius:12px;border:1px solid #1a1a1a}
 .bw-snake{max-width:700px;margin:0 auto 20px;text-align:center}
 .bw-snake img{width:100%;border-radius:12px;border:1px solid #1a1a1a}
-.bw-quote{font-family:'JetBrains Mono',monospace;font-size:13px;color:#333;letter-spacing:1px;margin:20px 0;animation:pulseQ 3s ease-in-out infinite}
+.bw-quote{font-family:'JetBrains Mono',monospace;font-size:13px;color:#333;letter-spacing:1px;margin:20px 0;text-align:center;animation:pulseQ 3s ease-in-out infinite}
 @keyframes pulseQ{0%,100%{opacity:.4}50%{opacity:.8}}
-.bw-footer{font-family:'JetBrains Mono',monospace;font-size:10px;color:#222;letter-spacing:3px;text-transform:uppercase;margin-top:20px}
+.bw-footer{font-family:'JetBrains Mono',monospace;font-size:10px;color:#222;letter-spacing:3px;text-transform:uppercase;margin-top:20px;text-align:center}
 
-@media(max-width:600px){.bw-name{font-size:36px}.bw-stats{grid-template-columns:repeat(3,1fr);gap:8px}.bw-stat-num{font-size:24px}.bw-donuts{gap:16px}.bw-lang-cards{grid-template-columns:1fr}.bw-about-grid{grid-template-columns:1fr}}
+@media(max-width:600px){
+  .bw-name{font-size:36px}
+  .bw-ascii{font-size:5px}
+  .bw-stats{grid-template-columns:repeat(3,1fr);gap:8px}
+  .bw-stat-num{font-size:24px}
+  .bw-donuts{gap:16px}
+  .bw-lang-cards{grid-template-columns:1fr}
+  .bw-about-grid{grid-template-columns:1fr}
+  .bw-views{position:static;display:flex;justify-content:center;margin-bottom:12px}
+}
 </style>
 </head>
 <body>
@@ -213,29 +239,39 @@ body{font-family:'Inter',-apple-system,system-ui,sans-serif;background:#000!impo
 
 <span id="ru"></span><span id="az"></span><span id="en"></span><span id="zh"></span>
 
-<div class="bw-views">
-  <div class="bw-views-track">
-    <span class="bw-views-caret">&gt;</span>
-    <span class="bw-views-text">views</span>
+<div class="bw-top">
+  <div class="bw-views">
+    <div class="bw-views-track">
+      <span class="bw-views-caret">&gt;</span>
+      <span class="bw-views-text">views</span>
+    </div>
+    <div class="bw-views-badge">
+      <img src="https://komarev.com/ghpvc/?username=Elou-Zamkol&color=000000&style=flat-square&label=&logo=github" alt="views"/>
+    </div>
   </div>
-  <div class="bw-views-badge">
-    <img src="https://komarev.com/ghpvc/?username=Elou-Zamkol&color=000000&style=flat-square&label=&logo=github" alt="views"/>
+
+  <pre class="bw-ascii">
+ ██████╗██████╗ ███████╗ █████╗ ████████╗███████╗    ███╗   ███╗ ██████╗ ██████╗ ███████╗
+██╔════╝██╔══██╗██╔════╝██╔══██╗╚══██╔══╝██╔════╝    ████╗ ████║██╔═══██╗██╔══██╗██╔════╝
+██║     ██████╔╝█████╗  ███████║   ██║   █████╗      ██╔████╔██║██║   ██║██████╔╝█████╗
+██║     ██╔══██╗██╔══╝  ██╔══██║   ██║   ██╔══╝      ██║╚██╔╝██║██║   ██║██╔══██╗██╔══╝
+╚██████╗██║  ██║███████╗██║  ██║   ██║   ███████╗    ██║ ╚═╝ ██║╚██████╔╝██║  ██║███████╗
+ ╚═════╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝   ╚═╝   ╚══════╝    ╚═╝     ╚═╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝</pre>
+
+  <div class="bw-avatar-wrap">
+    <div class="bw-avatar-ring"></div>
+    <img class="bw-avatar" src="https://avatars.githubusercontent.com/Elou-Zamkol" alt="Elou-Zamkol" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect fill=%22%23111%22 width=%22100%22 height=%22100%22/><text x=%2250%25%22 y=%2255%25%22 text-anchor=%22middle%22 fill=%22%23fff%22 font-size=%2240%22>E</text></svg>'"/>
+    <div class="bw-avatar-status"></div>
   </div>
-</div>
 
-<div class="bw-avatar-wrap">
-  <div class="bw-avatar-ring"></div>
-  <img class="bw-avatar" src="https://avatars.githubusercontent.com/Elou-Zamkol" alt="Elou-Zamkol" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect fill=%22%23111%22 width=%22100%22 height=%22100%22/><text x=%2250%25%22 y=%2255%25%22 text-anchor=%22middle%22 fill=%22%23fff%22 font-size=%2240%22>E</text></svg>'"/>
-  <div class="bw-avatar-status"></div>
-</div>
+  <div class="bw-name">Elou-Zamkol</div>
+  <div class="bw-tagline">full-stack developer · .net/c# · microservices <span class="cursor"></span></div>
 
-<div class="bw-name">Elou-Zamkol</div>
-<div class="bw-tagline">full-stack developer · .net/c# · microservices <span class="cursor"></span></div>
-
-<div class="bw-uptime">
-  <div class="bw-uptime-dot"></div>
-  <span>dev uptime:</span>
-  <span class="bw-uptime-time">∞ days of building</span>
+  <div class="bw-uptime">
+    <div class="bw-uptime-dot"></div>
+    <span>dev uptime:</span>
+    <span class="bw-uptime-time">∞ days of building</span>
+  </div>
 </div>
 
 <div class="bw-tabs">
