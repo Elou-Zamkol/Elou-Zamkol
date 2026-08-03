@@ -28,10 +28,9 @@ body{font-family:'Inter',-apple-system,system-ui,sans-serif;background:#000!impo
 
 .container{max-width:851px;margin:0 auto;padding:40px 20px;position:relative;z-index:1}
 
-.bw-ascii{font-family:'JetBrains Mono',monospace;font-size:8px;color:#333;white-space:pre;line-height:1.2;margin:10px 0;text-align:center}
-.bw-name{font-size:64px;font-weight:900;letter-spacing:2px;background:linear-gradient(135deg,#fff 0%,#888 50%,#fff 100%);background-size:200% 200%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 4s ease-in-out infinite;margin:0 0 6px}
+.bw-name{font-size:64px;font-weight:900;letter-spacing:2px;background:linear-gradient(135deg,#fff 0%,#888 50%,#fff 100%);background-size:200% 200%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 4s ease-in-out infinite;margin:0 0 6px;text-align:center}
 @keyframes shine{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
-.bw-tagline{font-family:'JetBrains Mono',monospace;font-size:14px;color:#555;letter-spacing:3px;text-transform:uppercase;margin-bottom:8px}
+.bw-tagline{font-family:'JetBrains Mono',monospace;font-size:14px;color:#555;letter-spacing:3px;text-transform:uppercase;margin-bottom:8px;text-align:center}
 .bw-tagline .cursor{display:inline-block;width:8px;height:16px;background:#fff;margin-left:2px;vertical-align:middle;animation:blink 1s step-end infinite}
 @keyframes blink{50%{opacity:0}}
 
@@ -47,12 +46,12 @@ body{font-family:'Inter',-apple-system,system-ui,sans-serif;background:#000!impo
 .bw-views-badge::before{content:'[';color:#fff;font-family:'JetBrains Mono',monospace;font-size:11px;margin-right:4px;font-weight:700}
 .bw-views-badge::after{content:']';color:#fff;font-family:'JetBrains Mono',monospace;font-size:11px;margin-left:4px;font-weight:700}
 
-.bw-uptime{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border-radius:8px;background:#0a0a0a;border:1px solid #1a1a1a;font-family:'JetBrains Mono',monospace;font-size:11px;color:#555;margin-bottom:20px}
+.bw-uptime{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border-radius:8px;background:#0a0a0a;border:1px solid #1a1a1a;font-family:'JetBrains Mono',monospace;font-size:11px;color:#555;margin-bottom:20px;text-align:center}
 .bw-uptime-dot{width:8px;height:8px;border-radius:50%;background:#fff;animation:uptimePulse 1.5s ease-in-out infinite}
 @keyframes uptimePulse{0%,100%{box-shadow:0 0 0 0 rgba(255,255,255,.5)}50%{box-shadow:0 0 0 4px rgba(255,255,255,0)}}
 .bw-uptime-time{color:#fff;font-weight:600}
 
-.bw-avatar-wrap{position:relative;display:inline-block;margin:16px 0}
+.bw-avatar-wrap{position:relative;display:inline-block;margin:0 auto 16px;text-align:center}
 .bw-avatar{width:130px;height:130px;border-radius:50%;border:3px solid #333;filter:grayscale(100%);transition:all .4s ease;object-fit:cover}
 .bw-avatar:hover{filter:grayscale(0%);border-color:#fff;box-shadow:0 0 40px rgba(255,255,255,.2);transform:scale(1.08)}
 .bw-avatar-ring{position:absolute;top:-8px;left:-8px;right:-8px;bottom:-8px;border-radius:50%;border:2px solid transparent;border-top-color:#fff;border-right-color:#fff;animation:ringSpin 3s linear infinite}
@@ -60,7 +59,7 @@ body{font-family:'Inter',-apple-system,system-ui,sans-serif;background:#000!impo
 .bw-avatar-status{position:absolute;bottom:4px;right:4px;width:16px;height:16px;background:#fff;border-radius:50%;border:3px solid #000;animation:pulse 2s ease-in-out infinite}
 @keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(255,255,255,.4)}50%{box-shadow:0 0 0 6px rgba(255,255,255,0)}}
 
-.bw-tabs{margin:24px 0 30px}
+.bw-tabs{margin:24px 0 30px;text-align:center}
 .bw-tab{display:inline-block;margin:0 5px;padding:8px 20px;border-radius:999px;text-decoration:none;font-weight:600;font-size:13px;color:#555;background:rgba(255,255,255,.05);border:1px solid #222;transition:all .3s ease;font-family:'Inter',sans-serif}
 .bw-tab:hover{border-color:#555;color:#aaa;transform:translateY(-2px)}
 
@@ -213,15 +212,6 @@ body{font-family:'Inter',-apple-system,system-ui,sans-serif;background:#000!impo
 <div class="container">
 
 <span id="ru"></span><span id="az"></span><span id="en"></span><span id="zh"></span>
-
-<pre class="bw-ascii">
- ██████╗██████╗ ███████╗ █████╗ ████████╗███████╗    ███╗   ███╗ ██████╗ ██████╗ ███████╗
-██╔════╝██╔══██╗██╔════╝██╔══██╗╚══██╔══╝██╔════╝    ████╗ ████║██╔═══██╗██╔══██╗██╔════╝
-██║     ██████╔╝█████╗  ███████║   ██║   █████╗      ██╔████╔██║██║   ██║██████╔╝█████╗
-██║     ██╔══██╗██╔══╝  ██╔══██║   ██║   ██╔══╝      ██║╚██╔╝██║██║   ██║██╔══██╗██╔══╝
-╚██████╗██║  ██║███████╗██║  ██║   ██║   ███████╗    ██║ ╚═╝ ██║╚██████╔╝██║  ██║███████╗
- ╚═════╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝   ╚═╝   ╚══════╝    ╚═╝     ╚═╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝
-</pre>
 
 <div class="bw-views">
   <div class="bw-views-track">
