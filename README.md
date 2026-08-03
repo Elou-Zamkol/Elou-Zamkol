@@ -1,7 +1,3 @@
-<div align="center" style="background:#000;padding:40px 20px;position:relative;border-radius:20px;margin:0;">
-
-<span id="ru"></span><span id="az"></span><span id="en"></span><span id="zh"></span>
-
 <style>
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 *{box-sizing:border-box;margin:0;padding:0}
@@ -209,6 +205,10 @@ body,.bw-root{font-family:'Inter',-apple-system,system-ui,sans-serif;background:
 
 @media(max-width:600px){.bw-name{font-size:36px}.bw-stats{grid-template-columns:repeat(3,1fr);gap:8px}.bw-stat-num{font-size:24px}.bw-donuts{gap:16px}.bw-lang-cards{grid-template-columns:1fr}.bw-about-grid{grid-template-columns:1fr}}
 </style>
+
+<div align="center" style="background:#000;padding:40px 20px;position:relative;border-radius:20px;margin:0;">
+
+<span id="ru"></span><span id="az"></span><span id="en"></span><span id="zh"></span>
 
 <div class="bw-grid-bg"></div>
 <div class="bw-particles"><div class="bw-particle"></div><div class="bw-particle"></div><div class="bw-particle"></div><div class="bw-particle"></div><div class="bw-particle"></div><div class="bw-particle"></div><div class="bw-particle"></div><div class="bw-particle"></div><div class="bw-particle"></div><div class="bw-particle"></div></div>
