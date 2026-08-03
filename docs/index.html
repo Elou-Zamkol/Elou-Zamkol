@@ -5,8 +5,9 @@
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
 <title>Raúl Abdurakhmanli — Full-Stack Developer</title>
 <style>
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 *{box-sizing:border-box;margin:0;padding:0}
-body{background:#000;color:#fff;font-family:'Inter','Segoe UI',system-ui,sans-serif;overflow-x:hidden}
+body{font-family:'Inter',-apple-system,system-ui,sans-serif;background:#000!important;color:#e0e0e0}
 
 .bw-grid-bg{position:fixed;top:0;left:0;width:100%;height:100%;background-image:linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);background-size:50px 50px;animation:gridMove 20s linear infinite;pointer-events:none;z-index:0}
 @keyframes gridMove{0%{background-position:0 0}100%{background-position:50px 50px}}
@@ -23,14 +24,14 @@ body{background:#000;color:#fff;font-family:'Inter','Segoe UI',system-ui,sans-se
 .bw-particle:nth-child(8){left:80%;animation-delay:5s;animation-duration:21s}
 .bw-particle:nth-child(9){left:90%;animation-delay:7s;animation-duration:13s}
 .bw-particle:nth-child(10){left:15%;animation-delay:9s;animation-duration:22s}
-@keyframes float{0%,100%{transform:translateY(100vh) scale(0);opacity:0}10%{opacity:.6;transform:translateY(70vh) scale(1)}90%{opacity:.6;transform:translateY(-10vh) scale(1)}}
+@keyframes float{0%,100%{transform:translateY(100vh) scale(0);opacity:0}10%{opacity:.6;transform:translateY(80vh) scale(1)}90%{opacity:.6;transform:translateY(10vh) scale(1)}}
 
 .container{max-width:851px;margin:0 auto;padding:40px 20px;position:relative;z-index:1}
 
-.bw-ascii{font-family:'JetBrains Mono','Fira Code',monospace;font-size:10px;color:#333;white-space:pre;line-height:1.3;margin:10px 0}
+.bw-ascii{font-family:'JetBrains Mono',monospace;font-size:10px;color:#333;white-space:pre;line-height:1.3;margin:10px 0}
 .bw-name{font-size:64px;font-weight:900;letter-spacing:2px;background:linear-gradient(135deg,#fff 0%,#888 50%,#fff 100%);background-size:200% 200%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 4s ease-in-out infinite;margin:0 0 6px}
 @keyframes shine{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
-.bw-tagline{font-family:'JetBrains Mono','Fira Code',monospace;font-size:14px;color:#555;letter-spacing:3px;text-transform:uppercase;margin-bottom:8px}
+.bw-tagline{font-family:'JetBrains Mono',monospace;font-size:14px;color:#555;letter-spacing:3px;text-transform:uppercase;margin-bottom:8px}
 .bw-tagline .cursor{display:inline-block;width:8px;height:16px;background:#fff;margin-left:2px;vertical-align:middle;animation:blink 1s step-end infinite}
 @keyframes blink{50%{opacity:0}}
 
@@ -60,21 +61,21 @@ body{background:#000;color:#fff;font-family:'Inter','Segoe UI',system-ui,sans-se
 @keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(255,255,255,.4)}50%{box-shadow:0 0 0 6px rgba(255,255,255,0)}}
 
 .bw-tabs{margin:24px 0 30px}
-.bw-tab{display:inline-block;margin:0 5px;padding:8px 20px;border-radius:999px;text-decoration:none;font-weight:600;font-size:13px;color:#555;background:rgba(255,255,255,.05);border:1px solid #222;transition:all .3s ease;font-family:'Inter',sans-serif;cursor:pointer}
+.bw-tab{display:inline-block;margin:0 5px;padding:8px 20px;border-radius:999px;text-decoration:none;font-weight:600;font-size:13px;color:#555;background:rgba(255,255,255,.05);border:1px solid #222;transition:all .3s ease;font-family:'Inter',sans-serif}
 .bw-tab:hover{border-color:#555;color:#aaa;transform:translateY(-2px)}
 
 .bw-panel{display:none;animation:fadeInUp .6s ease-out}
 @keyframes fadeInUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
 .bw-panel-ru{display:block}
-#lang-ru:checked~.bw-panels .bw-panel-ru{display:block}
-#lang-az:checked~.bw-panels .bw-panel-ru,#lang-az:checked~.bw-panels .bw-panel-en,#lang-az:checked~.bw-panels .bw-panel-zh{display:none}
-#lang-az:checked~.bw-panels .bw-panel-az{display:block}
-#lang-en:checked~.bw-panels .bw-panel-ru,#lang-en:checked~.bw-panels .bw-panel-az,#lang-en:checked~.bw-panels .bw-panel-zh{display:none}
-#lang-en:checked~.bw-panels .bw-panel-en{display:block}
-#lang-zh:checked~.bw-panels .bw-panel-ru,#lang-zh:checked~.bw-panels .bw-panel-az,#lang-zh:checked~.bw-panels .bw-panel-en{display:none}
-#lang-zh:checked~.bw-panels .bw-panel-zh{display:block}
-#lang-az:checked~.bw-tabs .bw-tab-az,#lang-en:checked~.bw-tabs .bw-tab-en,#lang-zh:checked~.bw-tabs .bw-tab-zh{background:#fff;color:#000;border-color:#fff}
-#lang-az:checked~.bw-tabs .bw-tab-ru,#lang-az:checked~.bw-tabs .bw-tab-en,#lang-az:checked~.bw-tabs .bw-tab-zh,#lang-en:checked~.bw-tabs .bw-tab-ru,#lang-en:checked~.bw-tabs .bw-tab-az,#lang-en:checked~.bw-tabs .bw-tab-zh,#lang-zh:checked~.bw-tabs .bw-tab-ru,#lang-zh:checked~.bw-tabs .bw-tab-az,#lang-zh:checked~.bw-tabs .bw-tab-en{background:rgba(255,255,255,.05);color:#555;border-color:#222}
+#ru:target~.bw-panel-ru{display:block}
+#az:target~.bw-panel-ru,#az:target~.bw-panel-en,#az:target~.bw-panel-zh{display:none}
+#az:target~.bw-panel-az{display:block}
+#en:target~.bw-panel-ru,#en:target~.bw-panel-az,#en:target~.bw-panel-zh{display:none}
+#en:target~.bw-panel-en{display:block}
+#zh:target~.bw-panel-ru,#zh:target~.bw-panel-az,#zh:target~.bw-panel-en{display:none}
+#zh:target~.bw-panel-zh{display:block}
+#az:target~.bw-tabs .bw-tab-az,#en:target~.bw-tabs .bw-tab-en,#zh:target~.bw-tabs .bw-tab-zh{background:#fff;color:#000;border-color:#fff}
+#az:target~.bw-tabs .bw-tab-ru,#az:target~.bw-tabs .bw-tab-en,#az:target~.bw-tabs .bw-tab-zh,#en:target~.bw-tabs .bw-tab-ru,#en:target~.bw-tabs .bw-tab-az,#en:target~.bw-tabs .bw-tab-zh,#zh:target~.bw-tabs .bw-tab-ru,#zh:target~.bw-tabs .bw-tab-az,#zh:target~.bw-tabs .bw-tab-en{background:rgba(255,255,255,.05);color:#555;border-color:#222}
 
 .bw-hero{position:relative;max-width:700px;margin:0 auto 28px;border-radius:16px;overflow:hidden;border:1px solid #1a1a1a;transition:all .4s ease}
 .bw-hero:hover{border-color:#fff;box-shadow:0 0 50px rgba(255,255,255,.08)}
@@ -211,6 +212,8 @@ body{background:#000;color:#fff;font-family:'Inter','Segoe UI',system-ui,sans-se
 
 <div class="container">
 
+<span id="ru"></span><span id="az"></span><span id="en"></span><span id="zh"></span>
+
 <pre class="bw-ascii">
  ██████╗██████╗ ███████╗ █████╗ ████████╗███████╗    ███╗   ███╗ ██████╗ ██████╗ ███████╗
 ██╔════╝██╔══██╗██╔════╝██╔══██╗╚══██╔══╝██╔════╝    ████╗ ████║██╔═══██╗██╔══██╗██╔════╝
@@ -245,19 +248,12 @@ body{background:#000;color:#fff;font-family:'Inter','Segoe UI',system-ui,sans-se
   <span class="bw-uptime-time">∞ days of building</span>
 </div>
 
-<input type="radio" name="lang" id="lang-ru" checked style="display:none"/>
-<input type="radio" name="lang" id="lang-az" style="display:none"/>
-<input type="radio" name="lang" id="lang-en" style="display:none"/>
-<input type="radio" name="lang" id="lang-zh" style="display:none"/>
-
 <div class="bw-tabs">
-  <label class="bw-tab bw-tab-ru" for="lang-ru">🇷🇺 Русский</label>
-  <label class="bw-tab bw-tab-az" for="lang-az">🇦🇿 Azərbaycan</label>
-  <label class="bw-tab bw-tab-en" for="lang-en">🇬🇧 English</label>
-  <label class="bw-tab bw-tab-zh" for="lang-zh">🇨🇳 中文</label>
+  <a class="bw-tab bw-tab-ru" href="#ru">🇷🇺 Русский</a>
+  <a class="bw-tab bw-tab-az" href="#az">🇦🇿 Azərbaycan</a>
+  <a class="bw-tab bw-tab-en" href="#en">🇬🇧 English</a>
+  <a class="bw-tab bw-tab-zh" href="#zh">🇨🇳 中文</a>
 </div>
-
-<div class="bw-panels">
 
 <!-- RUSSIAN -->
 <div class="bw-panel bw-panel-ru">
@@ -269,7 +265,6 @@ body{background:#000;color:#fff;font-family:'Inter','Segoe UI',system-ui,sans-se
       <div class="bw-hero-sub">// mechanical keyboard · dual monitor · dark mode only</div>
     </div>
   </div>
-
   <div class="bw-about-grid">
     <div class="bw-about-left">
       <div class="bw-about-label">// обо мне</div>
@@ -292,7 +287,6 @@ body{background:#000;color:#fff;font-family:'Inter','Segoe UI',system-ui,sans-se
       <div class="bw-about-text" style="margin-top:8px"><b>Языки:</b> C# · TypeScript · Python · Go · JavaScript · SQL</div>
     </div>
   </div>
-
   <div class="bw-terminal">
     <div class="bw-term-bar"><div class="bw-term-dot"></div><div class="bw-term-dot"></div><div class="bw-term-dot on"></div><div class="bw-term-title">elou-zamkol — system status</div></div>
     <div class="bw-term-body">
@@ -311,7 +305,6 @@ body{background:#000;color:#fff;font-family:'Inter','Segoe UI',system-ui,sans-se
       <div class="bw-term-cursor"></div>
     </div>
   </div>
-
   <div class="bw-section-title">// основные языки</div>
   <div class="bw-lang-cards">
     <div class="bw-lang-card" style="--accent:#fff"><div class="bw-lang-icon">C#</div><div class="bw-lang-name">C# / .NET</div><div class="bw-lang-sub">primary</div><div class="bw-lang-bar"><div class="bw-lang-bar-fill" style="--w:92%"></div></div><div class="bw-lang-pct">92%</div><div class="bw-lang-tags"><span class="bw-lang-tag">ASP.NET Core</span><span class="bw-lang-tag">EF Core</span><span class="bw-lang-tag">Dapper</span><span class="bw-lang-tag">LINQ</span></div></div>
@@ -321,7 +314,6 @@ body{background:#000;color:#fff;font-family:'Inter','Segoe UI',system-ui,sans-se
     <div class="bw-lang-card" style="--accent:#888"><div class="bw-lang-icon">JS</div><div class="bw-lang-name">JavaScript</div><div class="bw-lang-sub">ecosystem</div><div class="bw-lang-bar"><div class="bw-lang-bar-fill" style="--w:75%"></div></div><div class="bw-lang-pct">75%</div><div class="bw-lang-tags"><span class="bw-lang-tag">Express</span><span class="bw-lang-tag">Node.js</span><span class="bw-lang-tag">REST</span></div></div>
     <div class="bw-lang-card" style="--accent:#666"><div class="bw-lang-icon">SQL</div><div class="bw-lang-name">SQL</div><div class="bw-lang-sub">databases</div><div class="bw-lang-bar"><div class="bw-lang-bar-fill" style="--w:85%"></div></div><div class="bw-lang-pct">85%</div><div class="bw-lang-tags"><span class="bw-lang-tag">PostgreSQL</span><span class="bw-lang-tag">MS SQL</span><span class="bw-lang-tag">MongoDB</span></div></div>
   </div>
-
   <div class="bw-skills">
     <div class="bw-skills-title">// уровень навыков</div>
     <div class="bw-skill"><span class="bw-skill-name">C# / .NET</span><div class="bw-skill-bar"><div class="bw-skill-fill" style="--w:92%"></div></div><span class="bw-skill-pct">92</span></div>
@@ -333,36 +325,29 @@ body{background:#000;color:#fff;font-family:'Inter','Segoe UI',system-ui,sans-se
     <div class="bw-skill"><span class="bw-skill-name">Go / gRPC</span><div class="bw-skill-bar"><div class="bw-skill-fill" style="--w:55%"></div></div><span class="bw-skill-pct">55</span></div>
     <div class="bw-skill"><span class="bw-skill-name">Docker / DevOps</span><div class="bw-skill-bar"><div class="bw-skill-fill" style="--w:72%"></div></div><span class="bw-skill-pct">72</span></div>
   </div>
-
   <div class="bw-donuts">
     <div class="bw-donut-item"><svg viewBox="0 0 100 100"><circle class="bw-donut-bg" cx="50" cy="50" r="40"/><circle class="bw-donut-fill" cx="50" cy="50" r="40" style="--dash:232"/></svg><div class="bw-donut-pct">92%</div><div class="bw-donut-label">C#</div></div>
     <div class="bw-donut-item"><svg viewBox="0 0 100 100"><circle class="bw-donut-bg" cx="50" cy="50" r="40"/><circle class="bw-donut-fill" cx="50" cy="50" r="40" style="--dash:206"/></svg><div class="bw-donut-pct">82%</div><div class="bw-donut-label">TS</div></div>
     <div class="bw-donut-item"><svg viewBox="0 0 100 100"><circle class="bw-donut-bg" cx="50" cy="50" r="40"/><circle class="bw-donut-fill" cx="50" cy="50" r="40" style="--dash:171"/></svg><div class="bw-donut-pct">68%</div><div class="bw-donut-label">Python</div></div>
     <div class="bw-donut-item"><svg viewBox="0 0 100 100"><circle class="bw-donut-bg" cx="50" cy="50" r="40"/><circle class="bw-donut-fill" cx="50" cy="50" r="40" style="--dash:138"/></svg><div class="bw-donut-pct">55%</div><div class="bw-donut-label">Go</div></div>
   </div>
-
   <div class="bw-divider"></div>
-
   <div class="bw-pills"><div class="bw-pills-title">// backend & architecture</div><div class="bw-pill-c"><a class="bw-pill" href="https://github.com/Elou-Zamkol?tab=repositories">.NET</a><a class="bw-pill" href="https://github.com/Elou-Zamkol?tab=repositories">ASP.NET Core</a><a class="bw-pill" href="https://github.com/Elou-Zamkol?tab=repositories">Web API</a><a class="bw-pill" href="https://github.com/Elou-Zamkol?tab=repositories">EF Core</a><a class="bw-pill" href="https://github.com/Elou-Zamkol?tab=repositories">Dapper</a><a class="bw-pill" href="https://github.com/Elou-Zamkol?tab=repositories">LINQ</a><a class="bw-pill" href="https://github.com/Elou-Zamkol?tab=repositories">RabbitMQ</a><a class="bw-pill" href="https://github.com/Elou-Zamkol?tab=repositories">SignalR</a><a class="bw-pill" href="https://github.com/Elou-Zamkol?tab=repositories">gRPC</a><a class="bw-pill" href="https://github.com/Elou-Zamkol?tab=repositories">REST API</a><a class="bw-pill" href="https://github.com/Elou-Zamkol?tab=repositories">JWT</a><a class="bw-pill" href="https://github.com/Elou-Zamkol?tab=repositories">WebSocket</a></div></div>
   <div class="bw-pills"><div class="bw-pills-title">// databases</div><div class="bw-pill-c"><a class="bw-pill" href="https://github.com/Elou-Zamkol?tab=repositories">PostgreSQL</a><a class="bw-pill" href="https://github.com/Elou-Zamkol?tab=repositories">MS SQL</a><a class="bw-pill" href="https://github.com/Elou-Zamkol?tab=repositories">MongoDB</a><a class="bw-pill" href="https://github.com/Elou-Zamkol?tab=repositories">Redis</a></div></div>
   <div class="bw-pills"><div class="bw-pills-title">// frontend · mobile · desktop</div><div class="bw-pill-c"><a class="bw-pill" href="https://github.com/Elou-Zamkol?tab=repositories">React</a><a class="bw-pill" href="https://github.com/Elou-Zamkol?tab=repositories">Next.js</a><a class="bw-pill" href="https://github.com/Elou-Zamkol?tab=repositories">Vite</a><a class="bw-pill" href="https://github.com/Elou-Zamkol?tab=repositories">Tailwind</a><a class="bw-pill" href="https://github.com/Elou-Zamkol?tab=repositories">Redux</a><a class="bw-pill" href="https://github.com/Elou-Zamkol?tab=repositories">Zustand</a><a class="bw-pill" href="https://github.com/Elou-Zamkol?tab=repositories">React Native</a><a class="bw-pill" href="https://github.com/Elou-Zamkol?tab=repositories">Expo</a><a class="bw-pill" href="https://github.com/Elou-Zamkol?tab=repositories">Avalonia UI</a></div></div>
   <div class="bw-pills"><div class="bw-pills-title">// devops & tools</div><div class="bw-pill-c"><a class="bw-pill" href="https://github.com/Elou-Zamkol?tab=repositories">Docker</a><a class="bw-pill" href="https://github.com/Elou-Zamkol?tab=repositories">docker-compose</a><a class="bw-pill" href="https://github.com/Elou-Zamkol?tab=repositories">Nginx</a><a class="bw-pill" href="https://github.com/Elou-Zamkol?tab=repositories">Linux</a><a class="bw-pill" href="https://github.com/Elou-Zamkol?tab=repositories">Git</a><a class="bw-pill" href="https://github.com/Elou-Zamkol?tab=repositories">GitHub</a></div></div>
-
   <div class="bw-divider"></div>
-
   <div class="bw-stats">
     <div class="bw-stat"><div class="bw-stat-num">6</div><div class="bw-stat-label">Репозиториев</div></div>
     <div class="bw-stat"><div class="bw-stat-num">25+</div><div class="bw-stat-label">Коммитов</div></div>
     <div class="bw-stat"><div class="bw-stat-num">3</div><div class="bw-stat-label">Языка</div></div>
   </div>
-
   <div class="bw-timeline">
     <div class="bw-timeline-item"><div class="bw-timeline-date">2024</div><div class="bw-timeline-text"><b>Senior .NET Developer</b> — Архитектура микросервисов, Event-Driven системы</div></div>
     <div class="bw-timeline-item"><div class="bw-timeline-date">2023</div><div class="bw-timeline-text"><b>Full-Stack Developer</b> — .NET + React проекты, первые production деплои</div></div>
     <div class="bw-timeline-item"><div class="bw-timeline-date">2022</div><div class="bw-timeline-text"><b>Backend Developer</b> — ASP.NET Core, работа с базами данных</div></div>
     <div class="bw-timeline-item"><div class="bw-timeline-date">2021</div><div class="bw-timeline-text"><b>Начало пути</b> — Первые проекты на C#, изучение основ</div></div>
   </div>
-
   <div class="bw-graph"><img src="https://github-readme-activity-graph.vercel.app/graph?username=Elou-Zamkol&bg_color=000000&color=ffffff&line=ffffff&point=ffffff&area_color=111111&area=true&hide_border=true&custom_title=CONTRIBUTION%20ACTIVITY" alt="activity"/></div>
   <div class="bw-snake"><img src="https://raw.githubusercontent.com/Elou-Zamkol/output/main/github-snake-dark.svg" alt="snake" onerror="this.parentElement.style.display='none'"/></div>
   <div class="bw-quote">«архитектура — это не про паттерны, а про то, как система держит удар»</div>
@@ -423,9 +408,9 @@ body{background:#000;color:#fff;font-family:'Inter','Segoe UI',system-ui,sans-se
     <div class="bw-skill"><span class="bw-skill-name">React / Next.js</span><div class="bw-skill-bar"><div class="bw-skill-fill" style="--w:80%"></div></div><span class="bw-skill-pct">80</span></div>
     <div class="bw-skill"><span class="bw-skill-name">Docker</span><div class="bw-skill-bar"><div class="bw-skill-fill" style="--w:72%"></div></div><span class="bw-skill-pct">72</span></div>
   </div>
-  <div class="bw-pills"><div class="bw-pills-title">// backend</div><div class="bw-pill-c"><a class="bw-pill" href="https://github.com/Elou-Zamkol?tab=repositories">.NET</a><a class="bw-pill" href="https://github.com/Elou-Zamkol?tab=repositories">ASP.NET Core</a><a class="bw-pill" href="https://github.com/Elou-Zamkol?tab=repositories">EF Core</a><a class="bw-pill" href="https://github.com/Elou-Zamkol?tab=repositories">Dapper</a><a class="bw-pill" href="https://github.com/Elou-Zamkol?tab=repositories">RabbitMQ</a><a class="bw-pill" href="https://github.com/Elou-Zamkol?tab=repositories">gRPC</a></div></div>
-  <div class="bw-pills"><div class="bw-pills-title">// databases</div><div class="bw-pill-c"><a class="bw-pill" href="https://github.com/Elou-Zamkol?tab=repositories">PostgreSQL</a><a class="bw-pill" href="https://github.com/Elou-Zamkol?tab=repositories">MS SQL</a><a class="bw-pill" href="https://github.com/Elou-Zamkol?tab=repositories">MongoDB</a><a class="bw-pill" href="https://github.com/Elou-Zamkol?tab=repositories">Redis</a></div></div>
-  <div class="bw-pills"><div class="bw-pills-title">// frontend · mobile</div><div class="bw-pill-c"><a class="bw-pill" href="https://github.com/Elou-Zamkol?tab=repositories">React</a><a class="bw-pill" href="https://github.com/Elou-Zamkol?tab=repositories">Next.js</a><a class="bw-pill" href="https://github.com/Elou-Zamkol?tab=repositories">Tailwind</a><a class="bw-pill" href="https://github.com/Elou-Zamkol?tab=repositories">React Native</a><a class="bw-pill" href="https://github.com/Elou-Zamkol?tab=repositories">Expo</a><a class="bw-pill" href="https://github.com/Elou-Zamkol?tab=repositories">Avalonia</a></div></div>
+  <div class="bw-pills"><div class="bw-pills-title">// backend</div><div class="bw-pill-c"><a class="bw-pill" href="#">.NET</a><a class="bw-pill" href="#">ASP.NET Core</a><a class="bw-pill" href="#">EF Core</a><a class="bw-pill" href="#">Dapper</a><a class="bw-pill" href="#">RabbitMQ</a><a class="bw-pill" href="#">gRPC</a></div></div>
+  <div class="bw-pills"><div class="bw-pills-title">// databases</div><div class="bw-pill-c"><a class="bw-pill" href="#">PostgreSQL</a><a class="bw-pill" href="#">MS SQL</a><a class="bw-pill" href="#">MongoDB</a><a class="bw-pill" href="#">Redis</a></div></div>
+  <div class="bw-pills"><div class="bw-pills-title">// frontend · mobile</div><div class="bw-pill-c"><a class="bw-pill" href="#">React</a><a class="bw-pill" href="#">Next.js</a><a class="bw-pill" href="#">Tailwind</a><a class="bw-pill" href="#">React Native</a><a class="bw-pill" href="#">Expo</a><a class="bw-pill" href="#">Avalonia</a></div></div>
   <div class="bw-stats"><div class="bw-stat"><div class="bw-stat-num">6</div><div class="bw-stat-label">Repozitoriyalar</div></div><div class="bw-stat"><div class="bw-stat-num">25+</div><div class="bw-stat-label">Kommit</div></div><div class="bw-stat"><div class="bw-stat-num">3</div><div class="bw-stat-label">Dil</div></div></div>
   <div class="bw-graph"><img src="https://github-readme-activity-graph.vercel.app/graph?username=Elou-Zamkol&bg_color=000000&color=ffffff&line=ffffff&point=ffffff&area_color=111111&area=true&hide_border=true" alt="activity"/></div>
   <div class="bw-quote">«arxitektura sistemin zərbəyə necə davam gətirməsi haqqındadır»</div>
@@ -481,10 +466,10 @@ body{background:#000;color:#fff;font-family:'Inter','Segoe UI',system-ui,sans-se
     <div class="bw-lang-card" style="--accent:#888"><div class="bw-lang-icon">JS</div><div class="bw-lang-name">JavaScript</div><div class="bw-lang-sub">ecosystem</div><div class="bw-lang-bar"><div class="bw-lang-bar-fill" style="--w:75%"></div></div><div class="bw-lang-pct">75%</div><div class="bw-lang-tags"><span class="bw-lang-tag">Express</span><span class="bw-lang-tag">Node.js</span></div></div>
     <div class="bw-lang-card" style="--accent:#666"><div class="bw-lang-icon">SQL</div><div class="bw-lang-name">SQL</div><div class="bw-lang-sub">databases</div><div class="bw-lang-bar"><div class="bw-lang-bar-fill" style="--w:85%"></div></div><div class="bw-lang-pct">85%</div><div class="bw-lang-tags"><span class="bw-lang-tag">PostgreSQL</span><span class="bw-lang-tag">MS SQL</span></div></div>
   </div>
-  <div class="bw-pills"><div class="bw-pills-title">// backend & architecture</div><div class="bw-pill-c"><a class="bw-pill" href="https://github.com/Elou-Zamkol?tab=repositories">.NET</a><a class="bw-pill" href="https://github.com/Elou-Zamkol?tab=repositories">ASP.NET Core</a><a class="bw-pill" href="https://github.com/Elou-Zamkol?tab=repositories">EF Core</a><a class="bw-pill" href="https://github.com/Elou-Zamkol?tab=repositories">Dapper</a><a class="bw-pill" href="https://github.com/Elou-Zamkol?tab=repositories">RabbitMQ</a><a class="bw-pill" href="https://github.com/Elou-Zamkol?tab=repositories">gRPC</a><a class="bw-pill" href="https://github.com/Elou-Zamkol?tab=repositories">SignalR</a><a class="bw-pill" href="https://github.com/Elou-Zamkol?tab=repositories">JWT</a></div></div>
-  <div class="bw-pills"><div class="bw-pills-title">// databases</div><div class="bw-pill-c"><a class="bw-pill" href="https://github.com/Elou-Zamkol?tab=repositories">PostgreSQL</a><a class="bw-pill" href="https://github.com/Elou-Zamkol?tab=repositories">MS SQL</a><a class="bw-pill" href="https://github.com/Elou-Zamkol?tab=repositories">MongoDB</a><a class="bw-pill" href="https://github.com/Elou-Zamkol?tab=repositories">Redis</a></div></div>
-  <div class="bw-pills"><div class="bw-pills-title">// frontend · mobile · desktop</div><div class="bw-pill-c"><a class="bw-pill" href="https://github.com/Elou-Zamkol?tab=repositories">React</a><a class="bw-pill" href="https://github.com/Elou-Zamkol?tab=repositories">Next.js</a><a class="bw-pill" href="https://github.com/Elou-Zamkol?tab=repositories">Vite</a><a class="bw-pill" href="https://github.com/Elou-Zamkol?tab=repositories">Tailwind</a><a class="bw-pill" href="https://github.com/Elou-Zamkol?tab=repositories">Redux</a><a class="bw-pill" href="https://github.com/Elou-Zamkol?tab=repositories">React Native</a><a class="bw-pill" href="https://github.com/Elou-Zamkol?tab=repositories">Expo</a><a class="bw-pill" href="https://github.com/Elou-Zamkol?tab=repositories">Avalonia</a></div></div>
-  <div class="bw-pills"><div class="bw-pills-title">// devops</div><div class="bw-pill-c"><a class="bw-pill" href="https://github.com/Elou-Zamkol?tab=repositories">Docker</a><a class="bw-pill" href="https://github.com/Elou-Zamkol?tab=repositories">Nginx</a><a class="bw-pill" href="https://github.com/Elou-Zamkol?tab=repositories">Linux</a><a class="bw-pill" href="https://github.com/Elou-Zamkol?tab=repositories">Git</a><a class="bw-pill" href="https://github.com/Elou-Zamkol?tab=repositories">GitHub</a></div></div>
+  <div class="bw-pills"><div class="bw-pills-title">// backend & architecture</div><div class="bw-pill-c"><a class="bw-pill" href="#">.NET</a><a class="bw-pill" href="#">ASP.NET Core</a><a class="bw-pill" href="#">EF Core</a><a class="bw-pill" href="#">Dapper</a><a class="bw-pill" href="#">RabbitMQ</a><a class="bw-pill" href="#">gRPC</a><a class="bw-pill" href="#">SignalR</a><a class="bw-pill" href="#">JWT</a></div></div>
+  <div class="bw-pills"><div class="bw-pills-title">// databases</div><div class="bw-pill-c"><a class="bw-pill" href="#">PostgreSQL</a><a class="bw-pill" href="#">MS SQL</a><a class="bw-pill" href="#">MongoDB</a><a class="bw-pill" href="#">Redis</a></div></div>
+  <div class="bw-pills"><div class="bw-pills-title">// frontend · mobile · desktop</div><div class="bw-pill-c"><a class="bw-pill" href="#">React</a><a class="bw-pill" href="#">Next.js</a><a class="bw-pill" href="#">Vite</a><a class="bw-pill" href="#">Tailwind</a><a class="bw-pill" href="#">Redux</a><a class="bw-pill" href="#">React Native</a><a class="bw-pill" href="#">Expo</a><a class="bw-pill" href="#">Avalonia</a></div></div>
+  <div class="bw-pills"><div class="bw-pills-title">// devops</div><div class="bw-pill-c"><a class="bw-pill" href="#">Docker</a><a class="bw-pill" href="#">Nginx</a><a class="bw-pill" href="#">Linux</a><a class="bw-pill" href="#">Git</a><a class="bw-pill" href="#">GitHub</a></div></div>
   <div class="bw-stats"><div class="bw-stat"><div class="bw-stat-num">6</div><div class="bw-stat-label">Repos</div></div><div class="bw-stat"><div class="bw-stat-num">25+</div><div class="bw-stat-label">Commits</div></div><div class="bw-stat"><div class="bw-stat-num">3</div><div class="bw-stat-label">Languages</div></div></div>
   <div class="bw-graph"><img src="https://github-readme-activity-graph.vercel.app/graph?username=Elou-Zamkol&bg_color=000000&color=ffffff&line=ffffff&point=ffffff&area_color=111111&area=true&hide_border=true" alt="activity"/></div>
   <div class="bw-quote">«architecture isn't about patterns — it's about how the system takes a hit»</div>
@@ -537,19 +522,17 @@ body{background:#000;color:#fff;font-family:'Inter','Segoe UI',system-ui,sans-se
     <div class="bw-lang-card" style="--accent:#888"><div class="bw-lang-icon">JS</div><div class="bw-lang-name">JavaScript</div><div class="bw-lang-sub">生态</div><div class="bw-lang-bar"><div class="bw-lang-bar-fill" style="--w:75%"></div></div><div class="bw-lang-pct">75%</div><div class="bw-lang-tags"><span class="bw-lang-tag">Express</span><span class="bw-lang-tag">Node.js</span></div></div>
     <div class="bw-lang-card" style="--accent:#666"><div class="bw-lang-icon">SQL</div><div class="bw-lang-name">SQL</div><div class="bw-lang-sub">数据库</div><div class="bw-lang-bar"><div class="bw-lang-bar-fill" style="--w:85%"></div></div><div class="bw-lang-pct">85%</div><div class="bw-lang-tags"><span class="bw-lang-tag">PostgreSQL</span><span class="bw-lang-tag">MS SQL</span></div></div>
   </div>
-  <div class="bw-pills"><div class="bw-pills-title">// 后端与架构</div><div class="bw-pill-c"><a class="bw-pill" href="https://github.com/Elou-Zamkol?tab=repositories">.NET</a><a class="bw-pill" href="https://github.com/Elou-Zamkol?tab=repositories">ASP.NET Core</a><a class="bw-pill" href="https://github.com/Elou-Zamkol?tab=repositories">EF Core</a><a class="bw-pill" href="https://github.com/Elou-Zamkol?tab=repositories">Dapper</a><a class="bw-pill" href="https://github.com/Elou-Zamkol?tab=repositories">RabbitMQ</a><a class="bw-pill" href="https://github.com/Elou-Zamkol?tab=repositories">gRPC</a><a class="bw-pill" href="https://github.com/Elou-Zamkol?tab=repositories">SignalR</a></div></div>
-  <div class="bw-pills"><div class="bw-pills-title">// 数据库</div><div class="bw-pill-c"><a class="bw-pill" href="https://github.com/Elou-Zamkol?tab=repositories">PostgreSQL</a><a class="bw-pill" href="https://github.com/Elou-Zamkol?tab=repositories">MS SQL</a><a class="bw-pill" href="https://github.com/Elou-Zamkol?tab=repositories">MongoDB</a><a class="bw-pill" href="https://github.com/Elou-Zamkol?tab=repositories">Redis</a></div></div>
-  <div class="bw-pills"><div class="bw-pills-title">// 前端 · 移动 · 桌面</div><div class="bw-pill-c"><a class="bw-pill" href="https://github.com/Elou-Zamkol?tab=repositories">React</a><a class="bw-pill" href="https://github.com/Elou-Zamkol?tab=repositories">Next.js</a><a class="bw-pill" href="https://github.com/Elou-Zamkol?tab=repositories">Tailwind</a><a class="bw-pill" href="https://github.com/Elou-Zamkol?tab=repositories">React Native</a><a class="bw-pill" href="https://github.com/Elou-Zamkol?tab=repositories">Expo</a><a class="bw-pill" href="https://github.com/Elou-Zamkol?tab=repositories">Avalonia</a></div></div>
+  <div class="bw-pills"><div class="bw-pills-title">// 后端与架构</div><div class="bw-pill-c"><a class="bw-pill" href="#">.NET</a><a class="bw-pill" href="#">ASP.NET Core</a><a class="bw-pill" href="#">EF Core</a><a class="bw-pill" href="#">Dapper</a><a class="bw-pill" href="#">RabbitMQ</a><a class="bw-pill" href="#">gRPC</a><a class="bw-pill" href="#">SignalR</a></div></div>
+  <div class="bw-pills"><div class="bw-pills-title">// 数据库</div><div class="bw-pill-c"><a class="bw-pill" href="#">PostgreSQL</a><a class="bw-pill" href="#">MS SQL</a><a class="bw-pill" href="#">MongoDB</a><a class="bw-pill" href="#">Redis</a></div></div>
+  <div class="bw-pills"><div class="bw-pills-title">// 前端 · 移动 · 桌面</div><div class="bw-pill-c"><a class="bw-pill" href="#">React</a><a class="bw-pill" href="#">Next.js</a><a class="bw-pill" href="#">Tailwind</a><a class="bw-pill" href="#">React Native</a><a class="bw-pill" href="#">Expo</a><a class="bw-pill" href="#">Avalonia</a></div></div>
   <div class="bw-stats"><div class="bw-stat"><div class="bw-stat-num">6</div><div class="bw-stat-label">仓库</div></div><div class="bw-stat"><div class="bw-stat-num">25+</div><div class="bw-stat-label">提交</div></div><div class="bw-stat"><div class="bw-stat-num">3</div><div class="bw-stat-label">语言</div></div></div>
   <div class="bw-graph"><img src="https://github-readme-activity-graph.vercel.app/graph?username=Elou-Zamkol&bg_color=000000&color=ffffff&line=ffffff&point=ffffff&area_color=111111&area=true&hide_border=true" alt="activity"/></div>
   <div class="bw-quote">「架构不是关于模式——而是关于系统如何承受冲击」</div>
 </div>
 
-</div><!-- /bw-panels -->
-
 <div class="bw-divider"></div>
 <div class="bw-footer">built with passion · powered by code · 2026</div>
 
-</div><!-- /container -->
+</div>
 </body>
 </html>
