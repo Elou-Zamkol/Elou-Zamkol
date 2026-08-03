@@ -1,6 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="851" height="4200">
-<foreignObject width="851" height="4200">
-<div xmlns="http://www.w3.org/1999/xhtml" style="background:#000;padding:40px 20px;border-radius:20px;margin:0;overflow:hidden;">
+<div align="center">
 
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
@@ -29,21 +27,18 @@
 .bw-tagline .cursor{display:inline-block;width:8px;height:16px;background:#fff;margin-left:2px;vertical-align:middle;animation:blink 1s step-end infinite}
 @keyframes blink{50%{opacity:0}}
 
-/* ═══ VIEW COUNTER — TERMINAL STYLE, TOP-RIGHT ═══ */
-.bw-views{position:absolute;top:14px;right:16px;display:inline-flex;align-items:center;gap:0;cursor:default;z-index:5;overflow:hidden}
+.bw-views{display:inline-flex;align-items:center;gap:0;cursor:default;z-index:5;overflow:hidden}
 .bw-views-track{display:flex;align-items:center;gap:8px;padding:7px 12px 7px 10px;background:#0a0a0a;border:1px solid #1a1a1a;border-right:none;border-radius:6px 0 0 6px;position:relative}
 .bw-views-track::after{content:'';position:absolute;top:0;bottom:0;left:0;width:100%;background:linear-gradient(90deg,transparent 0%,rgba(255,255,255,.08) 50%,transparent 100%);animation:scanLine 3s ease-in-out infinite}
 @keyframes scanLine{0%{transform:translateX(-100%)}60%,100%{transform:translateX(100%)}}
 .bw-views-caret{color:#fff;font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;line-height:1;animation:caretBlink 1s steps(1) infinite}
 @keyframes caretBlink{50%{opacity:0}}
 .bw-views-text{font-family:'JetBrains Mono',monospace;font-size:10px;color:#888;text-transform:uppercase;letter-spacing:2px}
-.bw-views-pipe{color:#333;font-family:'JetBrains Mono',monospace;font-size:11px}
 .bw-views-badge{display:flex;align-items:center;padding:8px 14px;background:#111;border:1px solid #1a1a1a;border-left:none;border-radius:0 6px 6px 0;position:relative}
 .bw-views-badge img{height:14px;filter:grayscale(100%) brightness(1.5)}
 .bw-views-badge::before{content:'[';color:#fff;font-family:'JetBrains Mono',monospace;font-size:11px;margin-right:4px;font-weight:700}
 .bw-views-badge::after{content:']';color:#fff;font-family:'JetBrains Mono',monospace;font-size:11px;margin-left:4px;font-weight:700}
 
-/* ═══ UPTIME ═══ */
 .bw-uptime{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border-radius:8px;background:#0a0a0a;border:1px solid #1a1a1a;font-family:'JetBrains Mono',monospace;font-size:11px;color:#555;margin-bottom:20px}
 .bw-uptime-dot{width:8px;height:8px;border-radius:50%;background:#fff;animation:uptimePulse 1.5s ease-in-out infinite}
 @keyframes uptimePulse{0%,100%{box-shadow:0 0 0 0 rgba(255,255,255,.5)}50%{box-shadow:0 0 0 4px rgba(255,255,255,0)}}
@@ -74,7 +69,6 @@
 #lang-az:checked~.bw-tabs .bw-tab-az,#lang-en:checked~.bw-tabs .bw-tab-en,#lang-zh:checked~.bw-tabs .bw-tab-zh{background:#fff;color:#000;border-color:#fff}
 #lang-az:checked~.bw-tabs .bw-tab-ru,#lang-az:checked~.bw-tabs .bw-tab-en,#lang-az:checked~.bw-tabs .bw-tab-zh,#lang-en:checked~.bw-tabs .bw-tab-ru,#lang-en:checked~.bw-tabs .bw-tab-az,#lang-en:checked~.bw-tabs .bw-tab-zh,#lang-zh:checked~.bw-tabs .bw-tab-ru,#lang-zh:checked~.bw-tabs .bw-tab-az,#lang-zh:checked~.bw-tabs .bw-tab-en{background:rgba(255,255,255,.05);color:#555;border-color:#222}
 
-/* ═══ HERO ═══ */
 .bw-hero{position:relative;max-width:700px;margin:0 auto 28px;border-radius:16px;overflow:hidden;border:1px solid #1a1a1a;transition:all .4s ease}
 .bw-hero:hover{border-color:#fff;box-shadow:0 0 50px rgba(255,255,255,.08)}
 .bw-hero img{width:100%;display:block;filter:grayscale(100%) contrast(1.1);transition:filter .5s ease}
@@ -84,7 +78,6 @@
 .bw-hero-title{font-size:20px;font-weight:800;color:#fff;margin-bottom:4px}
 .bw-hero-sub{font-size:12px;color:#666;font-family:'JetBrains Mono',monospace}
 
-/* ═══ ABOUT ═══ */
 .bw-about-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:700px;margin:0 auto 28px}
 .bw-about-left{background:#0a0a0a;border:1px solid #1a1a1a;border-radius:16px;padding:24px;text-align:left;transition:all .3s ease}
 .bw-about-left:hover{border-color:#333;transform:translateY(-3px)}
@@ -99,7 +92,6 @@
 .bw-about-stat-num{font-size:24px;font-weight:900;color:#fff;font-family:'Inter',sans-serif}
 .bw-about-stat-label{font-size:9px;color:#555;font-family:'JetBrains Mono',monospace;letter-spacing:1px;text-transform:uppercase}
 
-/* ═══ TERMINAL TYPING ═══ */
 .bw-terminal{max-width:700px;margin:0 auto 28px;background:#0a0a0a;border:1px solid #1a1a1a;border-radius:14px;overflow:hidden;transition:all .3s ease}
 .bw-terminal:hover{border-color:#333;box-shadow:0 4px 30px rgba(255,255,255,.05);transform:translateY(-3px)}
 .bw-term-bar{display:flex;align-items:center;gap:6px;padding:10px 14px;background:#111;border-bottom:1px solid #1a1a1a}
@@ -108,7 +100,6 @@
 .bw-term-title{flex:1;text-align:center;font-family:'JetBrains Mono',monospace;font-size:11px;color:#555;letter-spacing:1px}
 .bw-term-body{padding:16px 18px;font-family:'JetBrains Mono',monospace;font-size:12.5px;line-height:2;color:#888;min-height:220px}
 
-/* typing animation lines */
 .bw-term-line{overflow:hidden;white-space:nowrap;animation:typeLine .8s steps(40) forwards;width:0}
 .bw-term-line:nth-child(1){animation-delay:0s}
 .bw-term-line:nth-child(2){animation-delay:.8s}
@@ -132,7 +123,6 @@
 
 .bw-section-title{font-family:'JetBrains Mono',monospace;font-size:12px;color:#555;letter-spacing:2px;text-transform:uppercase;margin-bottom:16px;max-width:700px;margin-left:auto;margin-right:auto;text-align:left}
 
-/* ═══ LANG CARDS ═══ */
 .bw-lang-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:700px;margin:0 auto 28px}
 .bw-lang-card{background:#0a0a0a;border:1px solid #1a1a1a;border-radius:14px;padding:20px;text-align:left;transition:all .4s ease;position:relative;overflow:hidden}
 .bw-lang-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,var(--accent),transparent);opacity:0;transition:opacity .3s ease}
@@ -160,18 +150,13 @@
 .bw-donuts{display:flex;flex-wrap:wrap;justify-content:center;gap:30px;max-width:700px;margin:0 auto 28px}
 .bw-donut-item{text-align:center;transition:all .4s cubic-bezier(.2,.8,.3,1);cursor:default}
 .bw-donut-item:hover{transform:scale(1.15)}
-.bw-donut-item:hover svg{filter:drop-shadow(0 0 12px rgba(255,255,255,.25))}
+.bw-donut-item:hover .bw-donut-circle{box-shadow:0 0 12px rgba(255,255,255,.25)}
 .bw-donut-item:hover .bw-donut-pct{text-shadow:0 0 12px rgba(255,255,255,.5);transform:scale(1.05);transition:all .3s ease}
 .bw-donut-item:hover .bw-donut-label{color:#888;transition:color .3s ease}
-.bw-donut-item svg{width:90px;height:90px;transform:rotate(-90deg);transition:filter .4s ease}
-.bw-donut-item circle{fill:none;stroke-width:8;stroke-linecap:round}
-.bw-donut-bg{stroke:#1a1a1a;transition:stroke .3s ease}
-.bw-donut-item:hover .bw-donut-bg{stroke:#2a2a2a}
-.bw-donut-fill{stroke:#fff;stroke-dasharray:251;stroke-dashoffset:251;animation:donutReveal 2s cubic-bezier(.2,.8,.3,1) forwards,donutPulse 3s ease-in-out 2.5s infinite}
-@keyframes donutReveal{to{stroke-dashoffset:calc(251 - var(--dash))}}
-@keyframes donutPulse{0%,100%{opacity:1;filter:none}50%{opacity:.7;filter:drop-shadow(0 0 6px rgba(255,255,255,.3))}}
-.bw-donut-label{font-family:'JetBrains Mono',monospace;font-size:11px;color:#555;margin-top:6px;transition:color .3s ease}
-.bw-donut-pct{font-family:'Inter',sans-serif;font-size:18px;font-weight:800;color:#fff;transition:all .3s ease}
+.bw-donut-circle{width:90px;height:90px;border-radius:50%;background:conic-gradient(#fff 0deg,var(--pct)deg,#1a1a1a var(--pct)deg);display:flex;align-items:center;justify-content:center;transition:all .4s ease;position:relative}
+.bw-donut-circle::before{content:'';position:absolute;width:66px;height:66px;border-radius:50%;background:#0a0a0a}
+.bw-donut-label{font-family:'JetBrains Mono',monospace;font-size:11px;color:#555;margin-top:6px;transition:color .3s ease;position:relative;z-index:1}
+.bw-donut-pct{font-family:'Inter',sans-serif;font-size:18px;font-weight:800;color:#fff;transition:all .3s ease;position:relative;z-index:1}
 
 .bw-pills{max-width:700px;margin:0 auto 20px;text-align:left}
 .bw-pills-title{font-family:'JetBrains Mono',monospace;font-size:12px;color:#555;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px}
@@ -207,10 +192,7 @@
 @media(max-width:600px){.bw-name{font-size:36px}.bw-stats{grid-template-columns:repeat(3,1fr);gap:8px}.bw-stat-num{font-size:24px}.bw-donuts{gap:16px}.bw-lang-cards{grid-template-columns:1fr}.bw-about-grid{grid-template-columns:1fr}}
 </style>
 
-<input type="radio" name="lang" id="lang-ru" checked style="display:none"/>
-<input type="radio" name="lang" id="lang-az" style="display:none"/>
-<input type="radio" name="lang" id="lang-en" style="display:none"/>
-<input type="radio" name="lang" id="lang-zh" style="display:none"/>
+<div style="background:#000;padding:40px 20px;border-radius:20px;overflow:hidden;position:relative">
 
 <div class="bw-grid-bg"></div>
 <div class="bw-particles"><div class="bw-particle"></div><div class="bw-particle"></div><div class="bw-particle"></div><div class="bw-particle"></div><div class="bw-particle"></div><div class="bw-particle"></div><div class="bw-particle"></div><div class="bw-particle"></div><div class="bw-particle"></div><div class="bw-particle"></div></div>
@@ -224,7 +206,6 @@
  ╚═════╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝   ╚═╝   ╚══════╝    ╚═╝     ╚═╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝
 </pre>
 
-<!-- VIEW COUNTER -->
 <div class="bw-views">
   <div class="bw-views-track">
     <span class="bw-views-caret">&gt;</span>
@@ -244,12 +225,16 @@
 <div class="bw-name">Elou-Zamkol</div>
 <div class="bw-tagline">full-stack developer · .net/c# · microservices <span class="cursor"></span></div>
 
-<!-- UPTIME -->
 <div class="bw-uptime">
   <div class="bw-uptime-dot"></div>
   <span>dev uptime:</span>
   <span class="bw-uptime-time">∞ days of building</span>
 </div>
+
+<input type="radio" name="lang" id="lang-ru" checked style="display:none"/>
+<input type="radio" name="lang" id="lang-az" style="display:none"/>
+<input type="radio" name="lang" id="lang-en" style="display:none"/>
+<input type="radio" name="lang" id="lang-zh" style="display:none"/>
 
 <div class="bw-tabs">
   <label class="bw-tab bw-tab-ru" for="lang-ru">🇷🇺 Русский</label>
@@ -258,11 +243,8 @@
   <label class="bw-tab bw-tab-zh" for="lang-zh">🇨🇳 中文</label>
 </div>
 
-<!-- ═══════════════════════════════════════════════════════════ -->
 <!-- RUSSIAN -->
-<!-- ═══════════════════════════════════════════════════════════ -->
 <div class="bw-panel bw-panel-ru">
-
   <div class="bw-hero">
     <img src="assets/workspace.png" alt="workspace" onerror="this.parentElement.style.display='none'"/>
     <div class="bw-hero-overlay">
@@ -275,15 +257,9 @@
   <div class="bw-about-grid">
     <div class="bw-about-left">
       <div class="bw-about-label">// обо мне</div>
-      <div class="bw-about-text">
-        <b>Рауль Абдурахманли</b> — full-stack разработчик из Баку. Специализируюсь на <b>.NET</b> экосистеме: проектирую микросервисные системы на <b>ASP.NET Core</b>, работаю с <b>Event-Driven</b> архитектурой, применяю <b>CQRS</b> и <b>DDD</b> паттерны.
-      </div>
-      <div class="bw-about-text" style="margin-top:10px">
-        На фронте пишу на <b>React</b> и <b>Next.js</b> с <b>TypeScript</b>. Имею опыт работы с реляционными и NoSQL базами: <b>PostgreSQL</b>, <b>MongoDB</b>, <b>Redis</b>. Умею деплоить и поддерживать инфраструктуру через <b>Docker</b> и <b>Nginx</b> на Linux.
-      </div>
-      <div class="bw-about-text" style="margin-top:10px">
-        У меня 6 публичных репозиториев на GitHub: от системных утилит на C# до фреймворков на TypeScript и Django. Сейчас углубляюсь в <b>Go</b> для высоконагруженных сервисов и изучаю <b>Kubernetes</b> для оркестрации контейнеров.
-      </div>
+      <div class="bw-about-text"><b>Рауль Абдурахманли</b> — full-stack разработчик из Баку. Специализируюсь на <b>.NET</b> экосистеме: проектирую микросервисные системы на <b>ASP.NET Core</b>, работаю с <b>Event-Driven</b> архитектурой, применяю <b>CQRS</b> и <b>DDD</b> паттерны.</div>
+      <div class="bw-about-text" style="margin-top:10px">На фронте пишу на <b>React</b> и <b>Next.js</b> с <b>TypeScript</b>. Имею опыт работы с реляционными и NoSQL базами: <b>PostgreSQL</b>, <b>MongoDB</b>, <b>Redis</b>. Умею деплоить и поддерживать инфраструктуру через <b>Docker</b> и <b>Nginx</b> на Linux.</div>
+      <div class="bw-about-text" style="margin-top:10px">У меня 6 публичных репозиториев на GitHub: от системных утилит на C# до фреймворков на TypeScript и Django. Сейчас углубляюсь в <b>Go</b> для высоконагруженных сервисов и изучаю <b>Kubernetes</b> для оркестрации контейнеров.</div>
       <div class="bw-about-quote">"архитектура — это не про паттерны, а про то, как система держит удар"</div>
     </div>
     <div class="bw-about-right">
@@ -293,25 +269,14 @@
         <div class="bw-about-stat"><div class="bw-about-stat-num">25+</div><div class="bw-about-stat-label">коммитов</div></div>
         <div class="bw-about-stat"><div class="bw-about-stat-num">3</div><div class="bw-about-stat-label">языка</div></div>
       </div>
-      <div class="bw-about-text" style="margin-top:16px">
-        <b>Основной стек:</b> C# · ASP.NET Core · EF Core · Dapper · RabbitMQ · SignalR · gRPC
-      </div>
-      <div class="bw-about-text" style="margin-top:8px">
-        <b>Фронтенд:</b> React · Next.js · TypeScript · Tailwind · Redux · Zustand
-      </div>
-      <div class="bw-about-text" style="margin-top:8px">
-        <b>Базы данных:</b> PostgreSQL · MS SQL · MongoDB · Redis
-      </div>
-      <div class="bw-about-text" style="margin-top:8px">
-        <b>DevOps:</b> Docker · docker-compose · Nginx · Linux · Git
-      </div>
-      <div class="bw-about-text" style="margin-top:8px">
-        <b>Языки:</b> C# · TypeScript · Python · Go · JavaScript · SQL
-      </div>
+      <div class="bw-about-text" style="margin-top:16px"><b>Основной стек:</b> C# · ASP.NET Core · EF Core · Dapper · RabbitMQ · SignalR · gRPC</div>
+      <div class="bw-about-text" style="margin-top:8px"><b>Фронтенд:</b> React · Next.js · TypeScript · Tailwind · Redux · Zustand</div>
+      <div class="bw-about-text" style="margin-top:8px"><b>Базы данных:</b> PostgreSQL · MS SQL · MongoDB · Redis</div>
+      <div class="bw-about-text" style="margin-top:8px"><b>DevOps:</b> Docker · docker-compose · Nginx · Linux · Git</div>
+      <div class="bw-about-text" style="margin-top:8px"><b>Языки:</b> C# · TypeScript · Python · Go · JavaScript · SQL</div>
     </div>
   </div>
 
-  <!-- TERMINAL TYPING -->
   <div class="bw-terminal">
     <div class="bw-term-bar"><div class="bw-term-dot"></div><div class="bw-term-dot"></div><div class="bw-term-dot on"></div><div class="bw-term-title">elou-zamkol — system status</div></div>
     <div class="bw-term-body">
@@ -354,10 +319,10 @@
   </div>
 
   <div class="bw-donuts">
-    <div class="bw-donut-item"><svg viewBox="0 0 100 100"><circle class="bw-donut-bg" cx="50" cy="50" r="40"/><circle class="bw-donut-fill" cx="50" cy="50" r="40" style="--dash:232"/></svg><div class="bw-donut-pct">92%</div><div class="bw-donut-label">C#</div></div>
-    <div class="bw-donut-item"><svg viewBox="0 0 100 100"><circle class="bw-donut-bg" cx="50" cy="50" r="40"/><circle class="bw-donut-fill" cx="50" cy="50" r="40" style="--dash:206"/></svg><div class="bw-donut-pct">82%</div><div class="bw-donut-label">TS</div></div>
-    <div class="bw-donut-item"><svg viewBox="0 0 100 100"><circle class="bw-donut-bg" cx="50" cy="50" r="40"/><circle class="bw-donut-fill" cx="50" cy="50" r="40" style="--dash:171"/></svg><div class="bw-donut-pct">68%</div><div class="bw-donut-label">Python</div></div>
-    <div class="bw-donut-item"><svg viewBox="0 0 100 100"><circle class="bw-donut-bg" cx="50" cy="50" r="40"/><circle class="bw-donut-fill" cx="50" cy="50" r="40" style="--dash:138"/></svg><div class="bw-donut-pct">55%</div><div class="bw-donut-label">Go</div></div>
+    <div class="bw-donut-item"><div class="bw-donut-circle" style="--pct:331"><div class="bw-donut-pct">92%</div></div><div class="bw-donut-label">C#</div></div>
+    <div class="bw-donut-item"><div class="bw-donut-circle" style="--pct:295"><div class="bw-donut-pct">82%</div></div><div class="bw-donut-label">TS</div></div>
+    <div class="bw-donut-item"><div class="bw-donut-circle" style="--pct:245"><div class="bw-donut-pct">68%</div></div><div class="bw-donut-label">Python</div></div>
+    <div class="bw-donut-item"><div class="bw-donut-circle" style="--pct:198"><div class="bw-donut-pct">55%</div></div><div class="bw-donut-label">Go</div></div>
   </div>
 
   <div class="bw-divider"></div>
@@ -387,9 +352,7 @@
   <div class="bw-quote">«архитектура — это не про паттерны, а про то, как система держит удар»</div>
 </div>
 
-<!-- ═══════════════════════════════════════════════════════════ -->
 <!-- AZERBAIJANI -->
-<!-- ═══════════════════════════════════════════════════════════ -->
 <div class="bw-panel bw-panel-az">
   <div class="bw-hero"><img src="assets/workspace.png" alt="workspace" onerror="this.parentElement.style.display='none'"/><div class="bw-hero-overlay"><div class="bw-hero-tag">· workspace ·</div><div class="bw-hero-title">Kodun yarandığı yer</div><div class="bw-hero-sub">// mechanical keyboard · dual monitor · dark mode only</div></div></div>
 
@@ -459,9 +422,7 @@
   <div class="bw-quote">«arxitektura sistemin zərbəyə necə davam gətirməsi haqqındadır»</div>
 </div>
 
-<!-- ═══════════════════════════════════════════════════════════ -->
 <!-- ENGLISH -->
-<!-- ═══════════════════════════════════════════════════════════ -->
 <div class="bw-panel bw-panel-en">
   <div class="bw-hero"><img src="assets/workspace.png" alt="workspace" onerror="this.parentElement.style.display='none'"/><div class="bw-hero-overlay"><div class="bw-hero-tag">· workspace ·</div><div class="bw-hero-title">Where Code Lives</div><div class="bw-hero-sub">// mechanical keyboard · dual monitor · dark mode only</div></div></div>
 
@@ -526,9 +487,7 @@
   <div class="bw-quote">«architecture isn't about patterns — it's about how the system takes a hit»</div>
 </div>
 
-<!-- ═══════════════════════════════════════════════════════════ -->
 <!-- CHINESE -->
-<!-- ═══════════════════════════════════════════════════════════ -->
 <div class="bw-panel bw-panel-zh">
   <div class="bw-hero"><img src="assets/workspace.png" alt="workspace" onerror="this.parentElement.style.display='none'"/><div class="bw-hero-overlay"><div class="bw-hero-tag">· 工作空间 ·</div><div class="bw-hero-title">代码诞生的地方</div><div class="bw-hero-sub">// 机械键盘 · 双显示器 · 只用暗色模式</div></div></div>
 
@@ -593,5 +552,5 @@
 <div class="bw-footer">built with passion · powered by code · 2026</div>
 
 </div>
-</foreignObject>
-</svg>
+
+</div>
